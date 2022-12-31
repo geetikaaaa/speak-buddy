@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".ObjectActivity"
+    android:id="@+id/parentLayout"
+    android:gravity="center">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/objectBackButton"
+        android:src="@drawable/back_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:clickable="true"
+        android:layout_margin="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan Object"
+        android:fontFamily="@font/amaranth"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:textColor="#fff"/>
+    <ImageView
+        android:id="@+id/flashButton"
+        android:src="@drawable/flash_off"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:clickable="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:id="@+id/objectsResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:fontFamily="@font/amaranth"
+        android:layout_margin="35dp"
+        android:textColor="#FFF"
+        android:layout_alignParentBottom="true" />
+    <ImageView
+        android:id="@+id/soundButton"
+        android:src="@drawable/sound_on"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+</android.widget.RelativeLayout>

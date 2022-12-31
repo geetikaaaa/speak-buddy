@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/sign_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            style="@style/SpinKitView.Wave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:SpinKit_Color="@color/colorPrimary" />
+        <TextView
+            android:id="@+id/loadingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capturing..."
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:fontFamily="@font/amaranth"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/objectBackButton2"
+        android:src="@drawable/back_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:clickable="true"
+        android:layout_margin="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan Signs"
+        android:fontFamily="@font/amaranth"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:textColor="#fff"/>
+    <ImageView
+        android:id="@+id/flashButton2"
+        android:src="@drawable/flash_off"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:clickable="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:id="@+id/signResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:fontFamily="@font/amaranth"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/recordButton" />
+    <ImageView
+        android:id="@+id/soundButton2"
+        android:src="@drawable/sound_on"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+    <ImageView
+        android:id="@+id/recordButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/video_camera"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"/>
+</android.widget.RelativeLayout>
